@@ -44,7 +44,7 @@
             display: block;
             text-decoration: none;
             /* Temporary Changes */
-            transition: outline .25s, background-color .25s, color .25s;
+            /* transition: outline .25s, background-color .25s, color .25s; */
         }
         header > ul > li > a:hover {
             color: #333;
@@ -70,7 +70,7 @@
             height: var(--profile-picture-dim);
             width: var(--profile-picture-dim);
             border-radius: var(--profile-picture-dim);
-            background-image: url(Images/my\ pic.jpg);
+            background-image: url("Images/my pic.jpg");
             filter: grayscale(1);
             background-repeat: no-repeat;
             background-size: cover;
@@ -151,7 +151,7 @@
         }
 
         /* Temporary Changes */
-        #temp-header-ul {
+        /* #temp-header-ul {
             justify-content: flex-end;
         }
         #temp-header-ul > li > a {
@@ -161,7 +161,7 @@
         #temp-header-ul > li > a:hover {
             outline: 1px solid #666;
             background-color: #EEE;
-        }
+        } */
         .abnormal {
             display: none;
         }
@@ -199,9 +199,9 @@
                 padding: 5px 25px 5px 25px;
             }
             /* Temporary Changes */
-            /* header {
+            header {
                 grid-template-columns: 2fr 3fr 2fr;
-            } */
+            }
             header {
                 grid-template-columns: 1fr;
             }
@@ -234,9 +234,9 @@
                 padding: 5px 15px 5px 15px;
             }
             /* Temporary Changes */
-            /* header {
+            header {
                 grid-template-columns: 1fr 2fr 1fr;
-            } */
+            }
             main {
                 padding: 0 15px 0 15px;
                 grid-template-columns: 1fr;
@@ -270,9 +270,9 @@
                 padding: 5px 10px 5px 10px;
             }
             /* Temporary Changes */
-            /* header {
+            header {
                 grid-template-columns: 1fr 3fr 1fr;
-            } */
+            }
             footer {
                 margin: 15px 0 15px 0;
             }
@@ -295,9 +295,9 @@
                 padding: 5px;
             }
             /* Temporary Changes */
-            /* header {
+            header {
                 grid-template-columns: 1fr 10fr 1fr;
-            } */
+            }
             header > ul {
                 justify-content: space-between;
             }
@@ -365,9 +365,9 @@
                 grid-template-rows: 3.12fr 0.75fr 0.5fr;
             }
             /* Temporary Changes */
-            #temp-header-ul > li > a {
+            /* #temp-header-ul > li > a {
                 padding: 0 6px 0 6px;
-            }
+            } */
         }
 
         @media screen and (min-width: 1500px) {
@@ -413,9 +413,9 @@
                 grid-template-rows: 3.17fr 1fr 0.5fr;
             }
             /* Temporary Changes */
-            #temp-header-ul > li > a {
+            /* #temp-header-ul > li > a {
                 padding: 0 6.5px 0 6.5px;
-            }
+            } */
         }
     </style>
 </head>
@@ -445,7 +445,7 @@
     <main>
         <aside>
             <div id="profile-picture-container">
-                <div id="my pic"></div>
+                <div id="profile-picture"></div>
             </div>
             <div id="personal-information-container">
                 <h2>Amirhossein Chavoshi</h2>
