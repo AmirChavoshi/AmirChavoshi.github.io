@@ -15,6 +15,7 @@
             background-image: url("Images/Electronic-design-power.jpg");
             padding: 25px 125px 25px 125px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            z-index: 1 ;
         }
         header {
             height: var(--header-height);
@@ -38,7 +39,7 @@
             line-height: var(--header-height);
         }
         header > ul > li > a, .active-page {
-            color: #666;
+            color: rgb(0, 0, 0);
             line-height: var(--header-height);
             height: inherit;
             display: block;
@@ -47,10 +48,10 @@
             /* transition: outline .25s, background-color .25s, color .25s; */
         }
         header > ul > li > a:hover {
-            color: #333;
+            color: rgb(0, 0, 0);
         }
         .active-page {
-            color: #333;
+            color: rgb(0, 0, 0);
         }
         main {
             display: grid;
@@ -83,7 +84,7 @@
             margin: 0;
             text-align: center;
             line-height: var(--header-height);
-            color: #333;
+            color: rgb(0, 0, 0);
         }
         .normal-text {
             font-weight: normal;
@@ -110,20 +111,20 @@
         }
         #contact-information > ul > li > a, footer > ul > li > a {
             font-size: 1.75em;
-            color: #666;
+            color: #14282f;
             transition: color .25s;
         }
         #contact-information > ul > li > a.envelope:hover, footer > ul > li > a.envelope:hover {
-            color: #0F9D58;
+            color: #14282f;
         }
         #contact-information > ul > li > a.github:hover, footer > ul > li > a.github:hover {
-            color: #131416;
+            color: #14282f;
         }
         #contact-information > ul > li > a.linkedin:hover, footer > ul > li > a.linkedin:hover {
-            color: #0077B5;
+            color: #14282f;
         }
         #contact-information > ul > li > a.skype:hover, footer > ul > li > a.skype:hover {
-            color: #00AFF0;
+            color: #14282f;
         }
 
         section {
@@ -132,7 +133,7 @@
         }
         #greetings > h2, #greetings > h3 {
             margin: 0;
-            color: #333;
+            color: rgb(0, 0, 0);
             line-height: var(--header-height);
         }
         #professional-summary {
@@ -144,7 +145,7 @@
             text-align: justify;
             line-height: 25px;
             letter-spacing: 1px;
-            color: #333;
+            color: rgb(0, 0, 0);
         }
         ::selection {
             background-color: #DADADA;
