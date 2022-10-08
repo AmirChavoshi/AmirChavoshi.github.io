@@ -88,7 +88,7 @@
             grid-template-rows: 3.15fr 0.75fr 0.5fr;
         }
         #profile-picture-container {
-            display: flex;
+            display: block;
             align-items: center;
             justify-content: center;
         }
@@ -97,6 +97,7 @@
             width: var(--profile-picture-dim);
             border-radius: var(--profile-picture-dim);
             background-image: url("Images/my pic.jpg");
+            /* position: fixed; */
             filter: grayscale(1);
             background-repeat: no-repeat;
             background-size: cover;
@@ -109,6 +110,7 @@
             margin: 0;
             text-align: center;
             line-height: var(--header-height);
+            /* position: fixed; */
             color: rgb(0, 0, 0);
         }
         .normal-text {
@@ -122,6 +124,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            /* position: fixed; */
         }
         footer {
             display: none;
@@ -132,12 +135,14 @@
             padding: 0;
             display: flex;
             justify-content: space-evenly;
+            /* position: fixed; */
             width: 50%;
         }
         #contact-information > ul > li > a, footer > ul > li > a {
             font-size: 1.75em;
             color: #14282f;
             transition: color .25s;
+            /* position: fixed; */
         }
         #contact-information > ul > li > a.envelope:hover, footer > ul > li > a.envelope:hover {
             color: #14282f;
