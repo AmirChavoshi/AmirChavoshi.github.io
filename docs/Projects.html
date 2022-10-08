@@ -63,7 +63,7 @@
             grid-template-rows: 3.15fr 0.75fr 0.5fr;
         }
         #profile-picture-container {
-            display: flex;
+            display: block;
             align-items: center;
             justify-content: center;
         }
@@ -72,6 +72,7 @@
             width: var(--profile-picture-dim);
             border-radius: var(--profile-picture-dim);
             background-image: url("Images/my pic.jpg");
+            position: absolute;
             filter: grayscale(1);
             background-repeat: no-repeat;
             background-size: cover;
