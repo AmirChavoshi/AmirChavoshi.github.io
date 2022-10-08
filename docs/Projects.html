@@ -13,9 +13,16 @@
         body {
             margin: 0;
             background-image: url("Images/Electronic-design-power.jpg");
+            /* background-color: rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.25); */
+            /* position: relative; */
+            background-size: 100% 100%;
             padding: 25px 125px 25px 125px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             z-index: 1 ;
+        }
+        div {
+            background-color: rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.50);
+            position: relative;
         }
         header {
             height: var(--header-height);
@@ -60,10 +67,10 @@
         }
         aside {
             display: grid;
-            grid-template-rows: 3.15fr 0.75fr 0.5fr;
+            grid-template-rows: 1fr 1fr 1fr;
         }
         #profile-picture-container {
-            display: block;
+            display: flex;
             align-items: center;
             justify-content: center;
         }
@@ -72,7 +79,7 @@
             width: var(--profile-picture-dim);
             border-radius: var(--profile-picture-dim);
             background-image: url("Images/my pic.jpg");
-            position: absolute;
+            /* position: fixed; */
             filter: grayscale(1);
             background-repeat: no-repeat;
             background-size: cover;
@@ -82,6 +89,8 @@
             filter: grayscale(0);
         }
         #personal-information-container > h2, #personal-information-container > h3 {
+            /* display: flex; */
+            /* position: relative; */
             margin: 0;
             text-align: center;
             line-height: var(--header-height);
@@ -134,6 +143,7 @@
         }
         #greetings > h2, #greetings > h3 {
             margin: 0;
+            text-align: center;
             color: rgb(0, 0, 0);
             line-height: var(--header-height);
         }
@@ -419,6 +429,24 @@
                 padding: 0 6.5px 0 6.5px;
             } */
         }
+        div.gallery {
+            border: 1px solid #ccc;
+            float: right;
+            width: 180px;
+            margin: 1px;
+        }
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        div.desc {
+            color: rgb(128, 51, 51);
+            padding: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -428,6 +456,7 @@
             <!-- <li>
                 <span class="active-page normal-text">About</span>
             </li> -->
+            <li>
                 <!--<a class="normal-text normal">My Résumé</a>-->
                 <a class="normal-text normal" href="https://AmirChavoshi.github.io/files/My-Resume.pdf">My Résumé</a>
             </li>
@@ -473,11 +502,92 @@
         </aside>
         <section>
             <div id="greetings">
-                <h2>Hi there! &#128075;</h2>
-                <h3>I'm glad that you're here!</h3>
+                <h3>Electric Motor-Cycle Drive Tester</h3>
             </div>
             <div id="professional-summary">
-                <p class="normal-text">.</p>
+                <p class="normal-text">The project of producing an electric motorcycle tester device is defined to 
+                    test and evaluate the ECU board manufactured by Innowatt Company after the initial assembly stage.
+                     The mentioned ECU board has a control unit and a drive unit, which in the control section provides
+                      the connection between various parts of the motorcycle, such as batteries, a speedometer, an immobilizer,
+                       and a motor that rotates the rear wheels and in the drive unit, three-phase power of about 5 kW is
+                        connected to the motor. In addition to two terminals for connecting batteries, this ECU has 3 output
+                         terminals for voltage injection and 24 general-purpose input/output pins, 10 communication input/output
+                          pins, and 6 pins for connecting to the speed sensor. The tester board is designed in such a way that it
+                           has access to all the inputs and outputs of the control unit and the drive unit and can evaluate it with 
+                           its own special process and transfer the accuracy or inaccuracy of the assembled board's operation
+                            to the computer through the UART communication. The hardware part of the tester device consists of
+                             a processor based on stm32feb IC, a power supply with 12-volt dc input, 7 electronic relays, and
+                              their controller IC and other necessary circuits for testing the ECU. In addition to the above
+                               sections, there are two UART peripherals to connect the two boards to each other and the tester
+                                board to the computer, and the necessary pins for programming the ECU board and the module on
+                                 it are also established on the tester. The software part based on embedded C is currently being 
+                                 developed and 80% of its work has been completed.</p>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_top_layer.png">
+                  <img src="Images/pcb_top_layer.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_bottom_layer.png">
+                  <img src="Images/pcb_bottom_layer.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_top.png">
+                  <img src="Images/pcb_top.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_bottom.png">
+                  <img src="Images/pcb_bottom.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/ordered.jpg">
+                  <img src="Images/ordered.jpg" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/semi manufactured.jpg">
+                  <img src="Images/semi manufactured.jpg" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_view_1.png">
+                  <img src="Images/pcb_view_1.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/pcb_view_2.png">
+                  <img src="Images/pcb_view_2.png" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/setup2.jpg">
+                  <img src="Images/setup2.jpg" width="600" height="100">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/setup3.jpg">
+                  <img src="Images/setup3.jpg" width="600" height="100">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="Images/setup4.jpg">
+                  <img src="Images/setup4.jpg" width="600" height="100">
+                </a>
+                <div class="desc">Add a description of the image here</div>
             </div>
         </section>
     </main>
