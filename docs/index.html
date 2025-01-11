@@ -206,9 +206,27 @@
 
 
         @media screen and (max-width: 1150px) {
-            body {
-                padding: 20px 75px 20px 75px;
-            }
+            aside {
+            position: sticky;
+            top: 0px;
+            right: 0;
+            height: 700px;
+            width: 300px;/* 400 */
+            background-color: #333;
+            color: white;
+            padding: 40px;
+        }
+        #profile-picture {
+            width: 250px; /* Set the size of the circular frame */
+            height: 400px; /* Set the size of the circular frame */
+            border-radius: 5%; /* Makes the container circular */
+            overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
+            background-image: url("Images/my pic.jpg");
+            background-size: cover; /* Ensures the image covers the circular frame */
+            background-position: center; /* Centers the image inside the frame */
+            filter: grayscale(1);
+            transition: filter 0.25s;
+        }
         }
         
         @media screen and (max-width: 1050px) {
@@ -224,70 +242,113 @@
         }
 
         @media screen and (max-width: 950px) {
-            body {
-                padding: 5px 25px 5px 25px;
+            aside {
+            position: sticky;
+            top: 0px;
+            right: 0;
+            height: 700px;
+            width: 200px;/* 400 */
+            background-color: #333;
+            color: white;
+            padding: 40px;
             }
-            /* Temporary Changes */
-            header {
-                grid-template-columns: 1fr 3fr 1fr;
+            #profile-picture {
+                width: 200px; /* Set the size of the circular frame */
+                height: 400px; /* Set the size of the circular frame */
+                border-radius: 5%; /* Makes the container circular */
+                overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
+                background-image: url("Images/my pic.jpg");
+                background-size: cover; /* Ensures the image covers the circular frame */
+                background-position: center; /* Centers the image inside the frame */
+                filter: grayscale(1);
+                transition: filter 0.25s;
             }
-            #professional-summary {
-                margin-top: 10px;
+            #personal-information-container {
+            /* padding: 10px 0; */
+            padding: 5px 0 5px 0;
+
             }
-            #personal-information-container > h2, #greetings > h2 {
+            #contact-information > ul, footer > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+            /* background-color: darkmagenta; */
+            }
+            #contact-information > ul > li > a, footer > ul > li > a {
+                font-size: 2em;
+                color: ghostwhite;
+                transition: color .25s;
+            }
+            /* #personal-information-container > h2, #greetings > h2 {
                 font-size: 1.25em;
             }
             #personal-information-container > h3 {
                 font-size: 1em;
-            }
-            .normal-text {
+            } */
+            /* .normal-text {
                 font-size: .9em;
             }
             #contact-information > ul, footer > ul {
                 width: 60%;
-            }
+            } */
         }
         @media screen and (max-width: 800px) {
             aside {
-                grid-template-rows: 3.15fr 0.75fr 0.5fr 0.65fr;
+            position: sticky;
+            top: 0px;
+            right: 0;
+            height: 700px;
+            width: 200px;/* 400 */
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            }
+            #contact-information > ul, footer > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+            /* background-color: darkmagenta; */
             }
         }
 
         /* Smaller Screens */
 
         @media screen and (max-width: 750px) {
-            body {
-                padding: 5px 15px 5px 15px;
-            }
-            /* Temporary Changes */
-            header {
-                grid-template-columns: 1fr 2fr 1fr;
-            }
-            main {
-                padding: 0 15px 0 15px;
-                grid-template-columns: 1fr;
-                grid-gap: 0;
-            }
-            #professional-summary {
-                margin-top: 5px;
-            }
-            #contact-information {
-                display: none;
-            }
-            footer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 20px 0 20px 0;
-            }
-            footer > ul {
-                width: 25%;
-            }
             aside {
-                grid-template-rows: 3.15fr 0.75fr;
+            position: sticky;
+            top: 0px;
+            right: 0;
+            height: 700px;
+            width: 180px;/* 400 */
+            background-color: #333;
+            color: white;
+            padding: 40px;
             }
-            section {
-                padding-top: 15px;
+            #profile-picture {
+                width: 180px; /* Set the size of the circular frame */
+                height: 400px; /* Set the size of the circular frame */
+                border-radius: 5%; /* Makes the container circular */
+                overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
+                background-image: url("Images/my pic.jpg");
+                background-size: cover; /* Ensures the image covers the circular frame */
+                background-position: center; /* Centers the image inside the frame */
+                filter: grayscale(1);
+                transition: filter 0.25s;
+            }
+            #contact-information > ul, footer > ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+            /* background-color: darkmagenta; */
             }
         }
 
@@ -343,7 +404,7 @@
                 padding-top: 5px;
             }
         }
-        
+
     </style>
 </head>
 <body>
