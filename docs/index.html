@@ -203,6 +203,147 @@
         #contact-information > ul > li > a.skype:hover, footer > ul > li > a.skype:hover {
             color: #00AFF0;
         }
+
+
+        @media screen and (max-width: 1150px) {
+            body {
+                padding: 20px 75px 20px 75px;
+            }
+        }
+        
+        @media screen and (max-width: 1050px) {
+            body {
+                padding: 15px 25px 15px 25px;
+            }
+            main {
+                grid-gap: 25px;
+            }
+            #professional-summary {
+                margin-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 950px) {
+            body {
+                padding: 5px 25px 5px 25px;
+            }
+            /* Temporary Changes */
+            header {
+                grid-template-columns: 1fr 3fr 1fr;
+            }
+            #professional-summary {
+                margin-top: 10px;
+            }
+            #personal-information-container > h2, #greetings > h2 {
+                font-size: 1.25em;
+            }
+            #personal-information-container > h3 {
+                font-size: 1em;
+            }
+            .normal-text {
+                font-size: .9em;
+            }
+            #contact-information > ul, footer > ul {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            aside {
+                grid-template-rows: 3.15fr 0.75fr 0.5fr 0.65fr;
+            }
+        }
+
+        /* Smaller Screens */
+
+        @media screen and (max-width: 750px) {
+            body {
+                padding: 5px 15px 5px 15px;
+            }
+            /* Temporary Changes */
+            header {
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+            main {
+                padding: 0 15px 0 15px;
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+            #professional-summary {
+                margin-top: 5px;
+            }
+            #contact-information {
+                display: none;
+            }
+            footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0 20px 0;
+            }
+            footer > ul {
+                width: 25%;
+            }
+            aside {
+                grid-template-rows: 3.15fr 0.75fr;
+            }
+            section {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 650px) {
+            body {
+                padding: 5px 10px 5px 10px;
+            }
+            /* Temporary Changes */
+            header {
+                grid-template-columns: 1fr 3fr 1fr;
+            }
+            footer {
+                margin: 15px 0 15px 0;
+            }
+            footer > ul {
+                width: 35%;
+            }
+            section {
+                padding-top: 10px;
+            }
+        }
+
+        @media screen and (max-width: 550px) {
+            .normal {
+                display: none;
+            }
+            .abnormal {
+                display: block;
+            }
+            body {
+                padding: 5px;
+            }
+            /* Temporary Changes */
+            header {
+                grid-template-columns: 0.5fr 4fr 0.5fr;
+            }
+            header > ul {
+                justify-content: space-between;
+            }
+            #professional-summary > p {
+                letter-spacing: 0;
+            }
+            header > ul > li > a, .active-page {
+                font-size: .9em;
+            }
+            footer {
+                margin: 10px 0 10px 0;
+            }
+            footer > ul {
+                width: 40%;
+            }
+            section {
+                padding-top: 5px;
+            }
+        }
+        
     </style>
 </head>
 <body>
