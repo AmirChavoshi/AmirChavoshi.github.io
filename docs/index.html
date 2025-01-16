@@ -1,57 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <title>Amirhossein Chavoshi | About</title>
-    <style>
-        /* Reset margin and padding */
-        body, html {
+<title>Amirhossein Chavoshi | About</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  /* position: sticky;
+  display: flex;
+  background-color: #333;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  /* padding: 10px 0; */
+    position: sticky;
+    top: 0;
+    background-color: #050000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 100px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 5px;
+
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+
+/* .side {
+  flex: 30%;
+  /* background-color: #333; */
+  /* color: white; */
+  /* display: grid; */
+  /* position: fixed; */
+  /* grid-template-rows: 0.5fr 0.1fr 0.1fr; */
+  /* background-color: #f1f1f1; */
+  /* padding: 20px; */
+  /* justify-content: center; */
+  /* margin: 2px 2px 2px 2px; */
+/* } */ 
+
+
+/* #profile-picture-container {
+            display: flex;
+            /* padding:  10px 10px 10px 10px; */
+
+            /* align-items: center; */
+            /* justify-content: center; */
+        /* }  */
+
+        /* #profile-picture {
+            width: 350px; /* Set the size of the circular frame */
+            /* height: 400px; Set the size of the circular frame */
+            /* border-radius: 0%; Makes the container circular */
+            /* overflow: hidden; Ensures the image doesn't overflow the circular frame */
+            /* background-image: url("Images/my pic.jpg"); */
+            /* background-size: cover; Ensures the image covers the circular frame */
+            /* background-position: center; Centers the image inside the frame */
+            /* filter: grayscale(1); */
+            /* transition: filter 0.25s; */
+        /* } */ 
+
+        /* #profile-picture:hover {
+            filter: grayscale(0);
+        } */
+
+        /* #personal-information-container {
+            /* padding: 10px 0; */
+            /* padding: 10px 0 10px 0; */
+            /* justify-content: center; */
+        /* } */
+
+        /* #personal-information-container > h2, #personal-information-container > h3 {
+            margin: 0; */
+            /* text-align: center; */
+            /* line-height: var(--header-height); */
+            /* color: rgb(1, 1, 6); */
+        /* } */ 
+
+ /* Sidebar/left column */
+.side {
+  flex: 30%;
+  display: grid;
+  grid-template-rows: 450px 80px 100px; /* Fixed heights for the rows */
+  background-color: #f1f1f1;              /* Light background for a clean look */
+  padding: 20px;
+  border-radius: 1px;                 /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  text-align: center;                  /* Centers the text inside */
+}
+
+/* Profile picture container */
+#profile-picture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically centers the picture */
+}
+
+#profile-picture {
+  width: 350px;
+  height: 420px;
+  border-radius: 5%; /* Circular profile picture */
+  background-image: url("Images/my pic.jpg"); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center;
+  filter: grayscale(1); /* Initial grayscale effect */
+  transition: filter 0.25s ease-in-out; /* Smooth transition on hover */
+}
+
+#profile-picture:hover {
+  filter: grayscale(0); /* Removes grayscale on hover */
+}
+
+/* Personal information container */
+#personal-information-container {
+  display: flex;
+  padding: 20px 0 20px 0; 
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+#personal-information-container > h2, #personal-information-container > h3 {
+  margin: 0;
+  text-align: center;
+  color: #333; /* Darker color for text */
+}
+
+        #location > i {
+            padding-right: 5px;
+            font-size: 1.21em;
+        }
+
+        /* #contact-information {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        /* #contact-information > ul, footer > ul {
+            list-style-type: none;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        :root {
-            --header-height: 40px;
-            --profile-picture-dim: 425px;
-        }
-        /* Sticky Navigation Menu */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background-color: #050000;
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            justify-content: space-evenly;
+            width: 50%;
+            background-color: darkmagenta;
+        } */
+        /* #contact-information > ul > li > a, footer > ul > li > a {
+            font-size: 2em;
+            color: rgb(1, 1, 21);
+            transition: color .25s;
         }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: background-color 0.3s, color 0.3s;
+        #contact-information > ul > li > a.envelope:hover, footer > ul > li > a.envelope:hover {
+            color: #00AFF0;
         }
-
-        .navbar a:hover {
-            background-color: #575757;
-            color: #ffffff;
-            border-radius: 5px;
+        #contact-information > ul > li > a.github:hover, footer > ul > li > a.github:hover {
+            color: #00AFF0;
         }
-
-        /* Main content */
-        .content {
-            display: flex;
-            height: 92vh; /* Full viewport height */
-            overflow: hidden; /* Prevent horizontal scrolling */
+        #contact-information > ul > li > a.linkedin:hover, footer > ul > li > a.linkedin:hover {
+            color: #00AFF0;
         }
+        #contact-information > ul > li > a.skype:hover, footer > ul > li > a.skype:hover {
+            color: #00AFF0;
+        } */
 
-        .section {
+        /* Contact information styling */
+#contact-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-information > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adds space between icons */
+}
+
+#contact-information > ul > li > a {
+  font-size: 2.0em; /* Adjusted size for better readability */
+  color: #333;
+  transition: color 0.25s ease;
+}
+
+#contact-information > ul > li > a:hover {
+  color: #007BFF; /* Hover effect color for all icons */
+}
+
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+
+.section {
             margin-bottom: 20px; /* Adds spacing between sections */
             padding: 15px; /* Adds inner spacing for each section */
             background-color: #fff; /* Optional: Sets a background for each section */
@@ -68,14 +262,14 @@
         }
         .section>p{
             text-align: justify;
-            font-size: 0.9em;
+            font-size: 1.0em;
         }
-        ul {
+        .section>ul {
         list-style-type: square; /* Changes bullet style to square */
         padding-left: 40px; /* Adjusts the spacing */
         }
 
-        li {
+        .section>li {
             color: #333; /* Sets the text color */
             font-size: 16px; /* Adjusts font size */
         }
@@ -85,340 +279,69 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
         }
 
-        /* Right Section (Scrollable) */
-        .right-section {
-            flex: 1; /* Takes up remaining space */
-            background-color: #f9f9f9;
-            font-size: 1.1em;
-            color: #333;
-            padding: 10px;
-            overflow-y: auto; /* Enables vertical scrolling */
-            height: 100vh; /* Ensures full height */
-        }
-        /* .section:nth-child(odd) {
-            background-color: #444;
-        }
 
-        .section:nth-child(even) {
-            background-color: #666;
-        } */
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
 
-        /* Aside picture and icons */
-        /* Aside picture and icons */
-        aside {
-            position: sticky;
-            top: 0px;
-            right: 0;
-            height: 600px;
-            width: 400px;
-            background-color: #333;
-            color: white;
-            padding: 40px;
-        }
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
 
-        .aside-container {
-            display: grid;
-            grid-template-rows: 0.5fr 0.1fr 0.1fr;
-        }
+@media screen and (max-width: 1300px) {
+  /* Style the navigation bar links */
+    .navbar a {
+        padding: 14px 70px;
 
-        #profile-picture-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    }
+}
 
-        #profile-picture {
-            width: 350px; /* Set the size of the circular frame */
-            height: 400px; /* Set the size of the circular frame */
-            border-radius: 5%; /* Makes the container circular */
-            overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
-            background-image: url("Images/my pic.jpg");
-            background-size: cover; /* Ensures the image covers the circular frame */
-            background-position: center; /* Centers the image inside the frame */
-            filter: grayscale(1);
-            transition: filter 0.25s;
-        }
+@media screen and (max-width: 1100px) {
+  /* Style the navigation bar links */
+    .navbar a {
+        padding: 14px 50px;
 
-        #profile-picture:hover {
-            filter: grayscale(0);
-        }
+    }
+}
 
-        #personal-information-container {
-            /* padding: 10px 0; */
-            padding: 10px 0 10px 0;
+@media screen and (max-width: 900px) {
+  /* Style the navigation bar links */
+    .navbar a {
+        padding: 14px 30px;
 
-        }
+    }
+}
 
-        #personal-information-container > h2, #personal-information-container > h3 {
-            margin: 0;
-            text-align: center;
-            line-height: var(--header-height);
-            color: ghostwhite;
-        }
-
-        .normal-text > span {
-            font-weight: normal;
-            font-size: 1.1em;
-            justify-content: center;
-
-        }
-
-        #location > i {
-            padding-right: 5px;
-            font-size: 1.21em;
-        }
-
-        #contact-information {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        footer {
-            display: none;
-        }
-        #contact-information > ul, footer > ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-evenly;
-            width: 50%;
-            /* background-color: darkmagenta; */
-        }
-        #contact-information > ul > li > a, footer > ul > li > a {
-            font-size: 2em;
-            color: ghostwhite;
-            transition: color .25s;
-        }
-        #contact-information > ul > li > a.envelope:hover, footer > ul > li > a.envelope:hover {
-            color: #00AFF0;
-        }
-        #contact-information > ul > li > a.github:hover, footer > ul > li > a.github:hover {
-            color: #00AFF0;
-        }
-        #contact-information > ul > li > a.linkedin:hover, footer > ul > li > a.linkedin:hover {
-            color: #00AFF0;
-        }
-        #contact-information > ul > li > a.skype:hover, footer > ul > li > a.skype:hover {
-            color: #00AFF0;
-        }
-
-
-        @media screen and (max-width: 1150px) {
-            aside {
-            position: sticky;
-            top: 0px;
-            right: 0;
-            height: 700px;
-            width: 300px;/* 400 */
-            background-color: #333;
-            color: white;
-            padding: 40px;
-        }
-        #profile-picture {
-            width: 250px; /* Set the size of the circular frame */
-            height: 400px; /* Set the size of the circular frame */
-            border-radius: 5%; /* Makes the container circular */
-            overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
-            background-image: url("Images/my pic.jpg");
-            background-size: cover; /* Ensures the image covers the circular frame */
-            background-position: center; /* Centers the image inside the frame */
-            filter: grayscale(1);
-            transition: filter 0.25s;
-        }
-        }
-        
-        @media screen and (max-width: 1050px) {
-            body {
-                padding: 15px 25px 15px 25px;
-            }
-            main {
-                grid-gap: 25px;
-            }
-            #professional-summary {
-                margin-top: 15px;
-            }
-        }
-
-        @media screen and (max-width: 950px) {
-            aside {
-            position: sticky;
-            top: 0px;
-            right: 0;
-            height: 700px;
-            width: 200px;/* 400 */
-            background-color: #333;
-            color: white;
-            padding: 40px;
-            }
-            #profile-picture {
-                width: 200px; /* Set the size of the circular frame */
-                height: 400px; /* Set the size of the circular frame */
-                border-radius: 5%; /* Makes the container circular */
-                overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
-                background-image: url("Images/my pic.jpg");
-                background-size: cover; /* Ensures the image covers the circular frame */
-                background-position: center; /* Centers the image inside the frame */
-                filter: grayscale(1);
-                transition: filter 0.25s;
-            }
-            #personal-information-container {
-            /* padding: 10px 0; */
-            padding: 5px 0 5px 0;
-
-            }
-            #contact-information > ul, footer > ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-evenly;
-            width: 90%;
-            /* background-color: darkmagenta; */
-            }
-            #contact-information > ul > li > a, footer > ul > li > a {
-                font-size: 2em;
-                color: ghostwhite;
-                transition: color .25s;
-            }
-            /* #personal-information-container > h2, #greetings > h2 {
-                font-size: 1.25em;
-            }
-            #personal-information-container > h3 {
-                font-size: 1em;
-            } */
-            /* .normal-text {
-                font-size: .9em;
-            }
-            #contact-information > ul, footer > ul {
-                width: 60%;
-            } */
-        }
-        @media screen and (max-width: 800px) {
-            aside {
-            position: sticky;
-            top: 0px;
-            right: 0;
-            height: 700px;
-            width: 200px;/* 400 */
-            background-color: #333;
-            color: white;
-            padding: 40px;
-            }
-            #contact-information > ul, footer > ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-evenly;
-            width: 90%;
-            /* background-color: darkmagenta; */
-            }
-        }
-
-        /* Smaller Screens */
-
-        @media screen and (max-width: 750px) {
-            .navbar {
-            position: sticky;
-            top: 0;
-            background-color: #050000;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2px 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            }
-            aside {
-            position: sticky;
-            top: 0px;
-            right: 0;
-            height: 700px;
-            width: 180px;/* 400 */
-            background-color: #333;
-            color: white;
-            padding: 40px;
-            }
-            #profile-picture {
-                width: 180px; /* Set the size of the circular frame */
-                height: 400px; /* Set the size of the circular frame */
-                border-radius: 5%; /* Makes the container circular */
-                overflow: hidden; /* Ensures the image doesn't overflow the circular frame */
-                background-image: url("Images/my pic.jpg");
-                background-size: cover; /* Ensures the image covers the circular frame */
-                background-position: center; /* Centers the image inside the frame */
-                filter: grayscale(1);
-                transition: filter 0.25s;
-            }
-            #contact-information > ul, footer > ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-evenly;
-            width: 90%;
-            /* background-color: darkmagenta; */
-            }
-        }
-
-        @media screen and (max-width: 650px) {
-            body {
-                padding: 5px 10px 5px 10px;
-            }
-            /* Temporary Changes */
-            header {
-                grid-template-columns: 1fr 3fr 1fr;
-            }
-            footer {
-                margin: 15px 0 15px 0;
-            }
-            footer > ul {
-                width: 35%;
-            }
-            section {
-                padding-top: 10px;
-            }
-        }
-
-        @media screen and (max-width: 550px) {
-            .normal {
-                display: none;
-            }
-            .abnormal {
-                display: block;
-            }
-            body {
-                padding: 5px;
-            }
-            /* Temporary Changes */
-            header {
-                grid-template-columns: 0.5fr 4fr 0.5fr;
-            }
-            header > ul {
-                justify-content: space-between;
-            }
-            #professional-summary > p {
-                letter-spacing: 0;
-            }
-            header > ul > li > a, .active-page {
-                font-size: .9em;
-            }
-            footer {
-                margin: 10px 0 10px 0;
-            }
-            footer > ul {
-                width: 40%;
-            }
-            section {
-                padding-top: 5px;
-            }
-        }
-
-    </style>
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+  /* Style the navigation bar links */
+    .navbar a {
+        width: 100%;
+    }
+}
+</style>
 </head>
 <body>
+
+<!-- Note
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div> -->
+
+<!-- Header -->
+<!-- <div class="header">
+  <h1>My Website</h1>
+  <p>With a <b>flexible</b> layout.</p>
+</div> -->
 
     <!-- Sticky Navigation Menu -->
     <div class="navbar">
@@ -429,380 +352,391 @@
         <a href="#Contact">Contact</a>
     </div>
 
-    <div class="content">
-        <aside>
-            <div class="aside-container">
-                <div id="profile-picture-container">
-                    <div id="profile-picture"></div>
-                </div>
-                <div id="personal-information-container">
-                    <h2>Amirhossein Chavoshi</h2>
-                    <h3>Embedded System and Electronic Engineer</h3>
-                    <h3 id="location" class="normal-text"><i class="fa fa-map-marker"></i><span>Tehran, Iran</span></h3>
-                </div>
-                <div id="contact-information">
-                    <ul>
-                        <li>
-                            <a class="envelope" href="mailto:amirhochavoshi@gmail.com"><i class="fa fa-envelope"></i></a>
-                        </li>
-                        <li>
-                            <a class="github" href="https://github.com/AmirChavoshi"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a class="linkedin" href="https://www.linkedin.com/in/amirhosseinchavoshi/"><i class="fa fa-linkedin-square"></i></a>
-                        </li>
-                        <li>
-                            <a class="skype" href="https://join.skype.com/invite/hdYuZiRHpXmh"><i class="fa fa-skype"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-    
-        <!-- Page Content -->
-        <main class="right-section">
-
-            <div id="About" class="section">
-                <h1>About</h1>
-                <p class="normal-text">I began my journey in Electrical Engineering as a bachelor’s student at the University of Tehran in 2017.
-                    In 2019, two years later, I started programming with a focus on C language and AVR microcontrollers.
-                     This sparked my interest in electronics, where I saw how combining embedded programming with hardware design could lead to success
-                      in the industry.
-                       <br><br>
-                    During my undergraduate studies, I gained hands-on experience in various laboratories and as a member of the ESFA Group.
-                    In 2022, I successfully completed my bachelor’s degree with a standout final project in embedded systems, which earned the
-                    Best Undergraduate Project Award at the University of Tehran.
-                    <br><br>
-                    That same year, I secured admission to the University of Tehran’s master’s program by achieving 23rd rank in the nationwide
-                     entrance exam. My thesis focused on improving the small-signal stability of grid-forming inverters, a critical topic in power
-                      systems and power electronics. I graduated with a distinguished GPA of 18.21/20 (3.86/4).
-                      <br><br>
-                    Throughout my master’s program, I gained significant industry experience, working with various companies and laboratories
-                     as an embedded engineer and electronics designer. My dedication and expertise led to a promotion as the Head of Digital
-                      Electronics, Embedded Design and Programming Department at my latest workplace (Samwavetech).
-                      <br><br>
-                      My interest lies in hardware product development within R&D teams, spanning from simulation, schematic, and PCB design to
-                      embedded C programming. I also specialize in developing .NET software for communication between system elements.
-                      <br><br>
-
-                    Over the past five years, I’ve mastered a diverse set of skills, including:
-                    <br>
-                    <ul>
-                        <li>
-                            Product development from concept to delivery
-                        </li>
-                        <li>
-                            Team and human resource management
-                        </li>
-                        <li>
-                            Enhancing research and development environments and procedures
-                        </li>
-                        <li>
-                            Hardware design, simulation, prototyping, implementation, and testing
-
-                        </li>
-                        <li>
-                            IC specification analysis and driver coding
-
-                        </li>
-                        <li>
-                            Writing clean, optimized, and efficient code to reduce production time
-
-                        </li>
-                    </ul>
-
-
-               </p>
-
-            </div>
-            <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
-            <div id="Experiences" class="section">     
-                <h1>Experiences</h1>
-                <p class="normal-text">
-                    <b style="color: red;">Digital Electronic and Embedded Design Team
-                    Leader </b> | Samwavetech Company (Full-Time) | Jul.2023-Now <br><br>
-                    Led a group of embedded C programmers and digital electronic designers,
-                    focusing on delivering effective and reliable solutions for the
-                    telecommunications and electronics industries.<br>
-                    <ul>
-                        <li>
-                            Design and development of hardware and software for telecommunications devices
-                        </li>
-                        <li>
-                            Optimized testing processes to improve accuracy, reduce cycle times, and enhance overall product reliability
-                        </li>
-                        <li>
-                            Managed the research and development team to achieve technical goals and drive innovation
-                        </li>
-
-                    </ul>
-                    <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Power Electronic Researcher </b> | University of Tehran's Photovoltaic Laboratory (Part-Time) |
-                     Jun.2023-Nov.2024 <br><br>
-                        Worked on my master's thesis and gained many industrial experiences.<br>
-                        <ul>
-                            <li>
-                                Designed, programmed and tested a 2 KW inverter
-                            </li>
-                            <li>
-                                Implemented cascaded-PI and PR controllers as a part of grid-forming solution on the grid-connected inverter
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Embedded C Programmer and Electronic Engineer </b> | Innowatt Company (Full-Time) |
-                     Jul.2022-Dec.2022 <br><br>
-                     Gained extensive experience in power electronics, focusing on motor
-                     drives and chargers, within a collaborative engineering environment.<br>
-                        <ul>
-                            <li>
-                                Design and development of electronic equipment for testing and analyzing
-                                devices during the company’s mass production process
-                            </li>
-                            <li>
-                                Implementing an efficient embedded workflow with an electronic tester,
-                                achieving a 90% reduction in production time
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Electronic (R&D) Engineer </b> | ESFA Group (Full-Time) |
-                     Dec.2020-Jul.2022 <br><br>
-                     Collaborated across various engineering domains within the company, including
-                    design, debugging, testing, wiring, and assembling products, primarily
-                    focused on protection and testing solutions for the power systems
-                    industry.<br>
-                        <ul>
-                            <li>
-                                Design and development of two electronic devices focused on testing
-                                solutions for power system equipment
-                            </li>
-                            <li>
-                                Multi-layer PCB design for the protection relay and testing devices
-                            </li>
-                            <li>
-                                Configuring and debugging of embedded code for newly assembled products
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Research Intern </b> | Electrical Machines and Microgrid Laboratory (Part-Time) |
-                     Jul.2020-Dec.2020 <br>
-                        <ul>
-                            <li>
-                                Studied and gained a deep knowledge in diverse types of electrical machines and generators
-                            </li>
-                            <li>
-                                Designed and constructed my first industrial product which was a digital data recorder(DDR)
-                            </li>
-                            <li>
-                                DDR’s functionalities: measure, display and record the speed of an electric motorcycle
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Research Intern </b> | High Voltage Laboratory (Part-Time) |
-                     Jul.2019-Jan.2020 <br>
-                        <ul>
-                            <li>
-                                Designed and created an electronic safe box using AVR microcontroller
-                            </li>
-                            <li>
-                                Designed and created an electric scooter using Arduino
-                            </li>
-                            <li>
-                                Designed and created a step-down 220/12 volt 12 VA transformer
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">Instructor </b> | Pejvak Institute (Part-Time) |
-                     Mar.2019-Sep.2019 <br>
-                        <ul>
-                            <li>
-                                Course Name: Programmable Logic Controller Programming
-
-                            </li>
-                            <li>
-                                I spent 6 months on teaching ladder programming using TIA Portal software at this institute.
-                            </li>
-    
-                        </ul>
-                        <br><br>
-                </p>
-                <p>
-                    <b style="color: red;">
-                        English Language Teacher </b> | Iranmehrcollege  (Part-Time) |
-                     May.2018-May.2019 <br>
-                        <ul>
-                            <li>
-                                After receiving the teacher training course(TTC) certificate, this experience of teaching began and gave me valuable soft skills.
-                            </li>
-    
-                        </ul>
-                        
-                </p>
-            </div>
-            <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
-
-            <div id="Projects" class="section">
-                <h1>Projects</h1>
-                <p class="normal-text">
-                    <b style="color: red;">Two Digital Single-Master-Multi-Slave Receiver Devices</b>
-                    <br><br>
-                    Designed and implemented two telecommunication receiver devices with
-                    a single-master-multi-slave architecture. This project was designed based on STM32F7 series and consisted of 10 slaves and 1
-                    master. Serial peripheral interface or SPI was the Utilized protocol for their communications. Final goal in this project was
-                    to handle data polling and sending commands from and to the slaves using a developed .NET software (WPF).
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">.NET-based Windows Presentation Foundation (WPF) Softwares</b>
-                    <br><br>
-                    Developed .NET WPF desktop applications for interfacing with hardware
-                    products, including the mentioned telecommunication receivers. Various control items can be implemented on the customed 
-                    softwares using XAML language and then corresponding event handlers will be called and executed in the C# backend code.
-                    This feature would accelerate the prototyping and development processes.
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">Driving Stepper Motor and Angle Control</b>
-                    <br><br>
-                    A control sequence is designed based on the principles of stepper motor operation, 
-                    allowing the user to input a desired angle through a user interface. The motor is then driven
-                     to the specified position. A custom hardware system measures the current angle, calculates the
-                      required steps and direction, and sends the necessary pulses to the motor via an advanced driver built around an STM32F1
-                       microcontroller.
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">RF Local Oscillator Design and Implementation</b>
-                    <br><br>
-                    A custom circuit is designed using the ADF4371 synthesizer, enabling the generation of an RF output signal with
-                     a frequency range of 62.5 MHz to 32 GHz. The IC is controlled via a 4-wire SPI protocol, with an STM32F7 series
-                      microcontroller as the master. With the provided driver code, users can control various parameters, including
-                       output signal frequency, charge pump current, and harmonic filter settings.
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">Developing Ethernet-Enabled Electronic Projects </b>
-                    <br><br>
-                    Various projects are developed using Ethernet configurations, with the LWIP library serving as the foundational source.
-                     Implemented configurations include Static IP + UDP protocol, Static IP + TCP protocol, DHCP + UDP protocol, and DHCP +
-                      TCP protocol. These projects feature both raw API and FreeRTOS-based development. Different series of ST microcontrollers
-                       have been utilized, along with various PHY ICs such as LAN8742, LAN8720, and DP83848, all of which have been successfully
-                        tested and integrated.
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">200W DC-DC Buck-Boost Converter Design </b>
-                    <br><br>
-                    This design utilizes the TI LM51772 driver IC, offering a wide range of capabilities, including adjustable
-                     output voltage, high efficiency, configurable switching frequency, and fast transient response. The output voltage and
-                      device settings can be dynamically programmed through the integrated I2C interface, controlled by an external
-                       microcontroller. The converter's topology features a 4-switch structure combined with a high-performance, specifically
-                        selected inductor.
-
-                      <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">2kVA Three-Phase, Grid-Connected Inverter Design and Control </b>
-                    <br><br>
-                    A 2 kVA experimental photovoltaic inverter has been developed by a team of power electronic researchers at PVLAB,
-                     University of Tehran. The project comprises a controller board and a power board. The STM32F4-based controller board
-                      communicates with the power board via wireless communication using an ESP32 module. A grid-forming control strategy,
-                       incorporating both PR controllers and a cascaded PI controller, has been implemented and tested on the inverter in
-                        both islanded and grid-connected scenarios.
-
-                      <br><br>
-                </p>
-                
-                <p class="normal-text">
-                    <b style="color: red;">Developing An Electronic Tester for Evaluating A 3KW Electric Motorcycle Drive </b>
-                    <br><br>
-                    This project focused on evaluating the electrical conditions of motorcycle drives during the manufacturing process.
-                     The device could detect short circuit defects, assess the anti-theft functionality, diagnose issues in semiconductor
-                      switches, and evaluate the health of gate driver circuits. The analyzed conditions, along with tested voltage and
-                       current data, were transmitted to a PC via a UART protocol operating at a speed of 1 Mbps.
-
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">Creating A Portable, USB-Based Electronic Observer </b>
-                    <br><br>
-                    This observer device could connect to a PC to display extracted data from the motorcycle drive. Communication between
-                     the observer and the drive was established via UART, with the observer side featuring an STM32F1 series microcontroller.
-                      The observer could detect and monitor online voltage and current values, as well as identify internal errors and warnings
-                      , sharing this information with the user through the PC connection.
-
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">Designing An Automatic Current Transformer (CT) Tester Module </b>
-                    <br><br>
-                    This product was designed as an optimization module for the main device (KAVOSH-T22, developed by the ESFA Group team).
-                     TCP/IP Ethernet communication was employed to manage the handshake between devices. The module significantly reduced
-                      outdoor, labor-intensive tests and overhauls by 80%, automating various test procedures and eliminating the need for
-                       several wiring changes. This automation was achieved using an internal STM32F4 microcontroller and supporting electronic
-                        circuits. Notable to mention, current transformers (CTs) require periodic testing, which this module streamlined
-                         effectively.
-
-
-                    <br><br>
-                </p>
-                <p class="normal-text">
-                    <b style="color: red;">Integrating A Current Transformer (CT) Burden Box Module </b>
-                    <br><br>
-                    This product served as another supplementary module for the tester module and KAVOSH-T22. Since CTs cannot operate
-                     in an open-circuit condition, their performance is analyzed and evaluated by connecting various loads to their secondary
-                      side, with the results documented in their datasheets. To support manufacturers during initial compliance testing, this
-                       device was designed to provide the necessary loads or burdens for the CTs, ensuring accurate performance analysis and
-                        validation.
-
-
-                    <br><br>
-                </p>
-            </div>
-            <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
-
-            <div id="Certifications" class="section">                
-                <h1>Certifications</h1>
-                <p class="normal-text"><b style="color: red;">C (Programming Language) Skill Assessment Badge </b>  (Issued by LinkedIn in 2023) <br>
-                    <b style="color: red;">Certificate of C++ Intermediate</b>     (Issued by Sololearn in 2023) <br>
-                    <b style="color: red;">Certificate of Introduction to C++</b>     (Issued by Sololearn in 2023) <br>
-                    <b style="color: red;">Certificate of Python3 Tutorial Course</b>     (Issued by Sololearn in 2019) <br>
-                    <b style="color: red;">Certificate of FPGA tutorial-primary</b>     (Issued by Maktabkhooneh in 2021) <br>
-                    <b style="color: red;">Certificate of Basic of Networking</b>     (Issued by Maktabkhooneh in 2021) <br>
-                    <b style="color: red;">Certificate of Teacher's Training Course</b>     (Issued by Iranmehr in 2018) <br>
-
-               </p>
-            </div>
-            <!-- <p><br><br></p> -->
-            <div id="Contact" class="section">
-                <h1>Contact</h1>
-                <p class="normal-text"><b style="color: red;">Location:</b>  Tehran, Iran <br>
-                    <b style="color: red;">Phone Number:</b>     +989120130363 <br>
-                    <b style="color: red;">Website:</b>  amirchavoshi.github.io <br>
-                    <b style="color: red;">Email:</b>  amirhochavoshi@gmail.com <br>
-               </p>
-
-            </div>
-            <br><br><br>
-        </main>
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <div id="profile-picture-container">
+        <div id="profile-picture"></div>
     </div>
+    <div id="personal-information-container">
+        <h2>Amirhossein Chavoshi</h2>
+        <h3>Embedded System and Electronic Engineer</h3>
+        <h3 id="location" class="normal-text"><i class="fa fa-map-marker"></i><span>Tehran, Iran</span></h3>
+    </div>
+    <div id="contact-information">
+        <ul>
+            <li>
+                <a class="envelope" href="mailto:amirhochavoshi@gmail.com"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+                <a class="github" href="https://github.com/AmirChavoshi"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+                <a class="linkedin" href="https://www.linkedin.com/in/amirhosseinchavoshi/"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+            <li>
+                <a class="skype" href="https://join.skype.com/invite/hdYuZiRHpXmh"><i class="fa fa-skype"></i></a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="main">
+    <div id="About" class="section">
+        <h1>About</h1>
+        <p class="normal-text">I began my journey in Electrical Engineering as a bachelor’s student at the University of Tehran in 2017.
+            In 2019, two years later, I started programming with a focus on C language and AVR microcontrollers.
+             This sparked my interest in electronics, where I saw how combining embedded programming with hardware design could lead to success
+              in the industry.
+               <br><br>
+            During my undergraduate studies, I gained hands-on experience in various laboratories and as a member of the ESFA Group.
+            In 2022, I successfully completed my bachelor’s degree with a standout final project in embedded systems, which earned the
+            Best Undergraduate Project Award at the University of Tehran.
+            <br><br>
+            That same year, I secured admission to the University of Tehran’s master’s program by achieving 23rd rank in the nationwide
+             entrance exam. My thesis focused on improving the small-signal stability of grid-forming inverters, a critical topic in power
+              systems and power electronics. I graduated with a distinguished GPA of 18.21/20 (3.86/4).
+              <br><br>
+            Throughout my master’s program, I gained significant industry experience, working with various companies and laboratories
+             as an embedded engineer and electronics designer. My dedication and expertise led to a promotion as the Head of Digital
+              Electronics, Embedded Design and Programming Department at my latest workplace (Samwavetech).
+              <br><br>
+              My interest lies in hardware product development within R&D teams, spanning from simulation, schematic, and PCB design to
+              embedded C programming. I also specialize in developing .NET software for communication between system elements.
+              <br><br>
 
+            Over the past five years, I’ve mastered a diverse set of skills, including:
+            <br>
+            <ul>
+                <li>
+                    Product development from concept to delivery
+                </li>
+                <li>
+                    Team and human resource management
+                </li>
+                <li>
+                    Enhancing research and development environments and procedures
+                </li>
+                <li>
+                    Hardware design, simulation, prototyping, implementation, and testing
+
+                </li>
+                <li>
+                    IC specification analysis and driver coding
+
+                </li>
+                <li>
+                    Writing clean, optimized, and efficient code to reduce production time
+
+                </li>
+            </ul>
+
+
+       </p>
+
+    </div>
+    <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
+    <div id="Experiences" class="section">     
+        <h1>Experiences</h1>
+        <p class="normal-text">
+            <b style="color: red;">Digital Electronic and Embedded Design Team
+            Leader </b> | Samwavetech Company (Full-Time) | Jul.2023-Now <br><br>
+            Led a group of embedded C programmers and digital electronic designers,
+            focusing on delivering effective and reliable solutions for the
+            telecommunications and electronics industries.<br>
+            <ul>
+                <li>
+                    Design and development of hardware and software for telecommunications devices
+                </li>
+                <li>
+                    Optimized testing processes to improve accuracy, reduce cycle times, and enhance overall product reliability
+                </li>
+                <li>
+                    Managed the research and development team to achieve technical goals and drive innovation
+                </li>
+
+            </ul>
+            <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Power Electronic Researcher </b> | University of Tehran's Photovoltaic Laboratory (Part-Time) |
+             Jun.2023-Nov.2024 <br><br>
+                Worked on my master's thesis and gained many industrial experiences.<br>
+                <ul>
+                    <li>
+                        Designed, programmed and tested a 2 KW inverter
+                    </li>
+                    <li>
+                        Implemented cascaded-PI and PR controllers as a part of grid-forming solution on the grid-connected inverter
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Embedded C Programmer and Electronic Engineer </b> | Innowatt Company (Full-Time) |
+             Jul.2022-Dec.2022 <br><br>
+             Gained extensive experience in power electronics, focusing on motor
+             drives and chargers, within a collaborative engineering environment.<br>
+                <ul>
+                    <li>
+                        Design and development of electronic equipment for testing and analyzing
+                        devices during the company’s mass production process
+                    </li>
+                    <li>
+                        Implementing an efficient embedded workflow with an electronic tester,
+                        achieving a 90% reduction in production time
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Electronic (R&D) Engineer </b> | ESFA Group (Full-Time) |
+             Dec.2020-Jul.2022 <br><br>
+             Collaborated across various engineering domains within the company, including
+            design, debugging, testing, wiring, and assembling products, primarily
+            focused on protection and testing solutions for the power systems
+            industry.<br>
+                <ul>
+                    <li>
+                        Design and development of two electronic devices focused on testing
+                        solutions for power system equipment
+                    </li>
+                    <li>
+                        Multi-layer PCB design for the protection relay and testing devices
+                    </li>
+                    <li>
+                        Configuring and debugging of embedded code for newly assembled products
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Research Intern </b> | Electrical Machines and Microgrid Laboratory (Part-Time) |
+             Jul.2020-Dec.2020 <br>
+                <ul>
+                    <li>
+                        Studied and gained a deep knowledge in diverse types of electrical machines and generators
+                    </li>
+                    <li>
+                        Designed and constructed my first industrial product which was a digital data recorder(DDR)
+                    </li>
+                    <li>
+                        DDR’s functionalities: measure, display and record the speed of an electric motorcycle
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Research Intern </b> | High Voltage Laboratory (Part-Time) |
+             Jul.2019-Jan.2020 <br>
+                <ul>
+                    <li>
+                        Designed and created an electronic safe box using AVR microcontroller
+                    </li>
+                    <li>
+                        Designed and created an electric scooter using Arduino
+                    </li>
+                    <li>
+                        Designed and created a step-down 220/12 volt 12 VA transformer
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">Instructor </b> | Pejvak Institute (Part-Time) |
+             Mar.2019-Sep.2019 <br>
+                <ul>
+                    <li>
+                        Course Name: Programmable Logic Controller Programming
+
+                    </li>
+                    <li>
+                        I spent 6 months on teaching ladder programming using TIA Portal software at this institute.
+                    </li>
+
+                </ul>
+                <br><br>
+        </p>
+        <p>
+            <b style="color: red;">
+                English Language Teacher </b> | Iranmehrcollege  (Part-Time) |
+             May.2018-May.2019 <br>
+                <ul>
+                    <li>
+                        After receiving the teacher training course(TTC) certificate, this experience of teaching began and gave me valuable soft skills.
+                    </li>
+
+                </ul>
+                
+        </p>
+    </div>
+    <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
+
+    <div id="Projects" class="section">
+        <h1>Projects</h1>
+        <p class="normal-text">
+            <b style="color: red;">Two Digital Single-Master-Multi-Slave Receiver Devices</b>
+            <br><br>
+            Designed and implemented two telecommunication receiver devices with
+            a single-master-multi-slave architecture. This project was designed based on STM32F7 series and consisted of 10 slaves and 1
+            master. Serial peripheral interface or SPI was the Utilized protocol for their communications. Final goal in this project was
+            to handle data polling and sending commands from and to the slaves using a developed .NET software (WPF).
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">.NET-based Windows Presentation Foundation (WPF) Softwares</b>
+            <br><br>
+            Developed .NET WPF desktop applications for interfacing with hardware
+            products, including the mentioned telecommunication receivers. Various control items can be implemented on the customed 
+            softwares using XAML language and then corresponding event handlers will be called and executed in the C# backend code.
+            This feature would accelerate the prototyping and development processes.
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">Driving Stepper Motor and Angle Control</b>
+            <br><br>
+            A control sequence is designed based on the principles of stepper motor operation, 
+            allowing the user to input a desired angle through a user interface. The motor is then driven
+             to the specified position. A custom hardware system measures the current angle, calculates the
+              required steps and direction, and sends the necessary pulses to the motor via an advanced driver built around an STM32F1
+               microcontroller.
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">RF Local Oscillator Design and Implementation</b>
+            <br><br>
+            A custom circuit is designed using the ADF4371 synthesizer, enabling the generation of an RF output signal with
+             a frequency range of 62.5 MHz to 32 GHz. The IC is controlled via a 4-wire SPI protocol, with an STM32F7 series
+              microcontroller as the master. With the provided driver code, users can control various parameters, including
+               output signal frequency, charge pump current, and harmonic filter settings.
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">Developing Ethernet-Enabled Electronic Projects </b>
+            <br><br>
+            Various projects are developed using Ethernet configurations, with the LWIP library serving as the foundational source.
+             Implemented configurations include Static IP + UDP protocol, Static IP + TCP protocol, DHCP + UDP protocol, and DHCP +
+              TCP protocol. These projects feature both raw API and FreeRTOS-based development. Different series of ST microcontrollers
+               have been utilized, along with various PHY ICs such as LAN8742, LAN8720, and DP83848, all of which have been successfully
+                tested and integrated.
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">200W DC-DC Buck-Boost Converter Design </b>
+            <br><br>
+            This design utilizes the TI LM51772 driver IC, offering a wide range of capabilities, including adjustable
+             output voltage, high efficiency, configurable switching frequency, and fast transient response. The output voltage and
+              device settings can be dynamically programmed through the integrated I2C interface, controlled by an external
+               microcontroller. The converter's topology features a 4-switch structure combined with a high-performance, specifically
+                selected inductor.
+
+              <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">2kVA Three-Phase, Grid-Connected Inverter Design and Control </b>
+            <br><br>
+            A 2 kVA experimental photovoltaic inverter has been developed by a team of power electronic researchers at PVLAB,
+             University of Tehran. The project comprises a controller board and a power board. The STM32F4-based controller board
+              communicates with the power board via wireless communication using an ESP32 module. A grid-forming control strategy,
+               incorporating both PR controllers and a cascaded PI controller, has been implemented and tested on the inverter in
+                both islanded and grid-connected scenarios.
+
+              <br><br>
+        </p>
+        
+        <p class="normal-text">
+            <b style="color: red;">Developing An Electronic Tester for Evaluating A 3KW Electric Motorcycle Drive </b>
+            <br><br>
+            This project focused on evaluating the electrical conditions of motorcycle drives during the manufacturing process.
+             The device could detect short circuit defects, assess the anti-theft functionality, diagnose issues in semiconductor
+              switches, and evaluate the health of gate driver circuits. The analyzed conditions, along with tested voltage and
+               current data, were transmitted to a PC via a UART protocol operating at a speed of 1 Mbps.
+
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">Creating A Portable, USB-Based Electronic Observer </b>
+            <br><br>
+            This observer device could connect to a PC to display extracted data from the motorcycle drive. Communication between
+             the observer and the drive was established via UART, with the observer side featuring an STM32F1 series microcontroller.
+              The observer could detect and monitor online voltage and current values, as well as identify internal errors and warnings
+              , sharing this information with the user through the PC connection.
+
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">Designing An Automatic Current Transformer (CT) Tester Module </b>
+            <br><br>
+            This product was designed as an optimization module for the main device (KAVOSH-T22, developed by the ESFA Group team).
+             TCP/IP Ethernet communication was employed to manage the handshake between devices. The module significantly reduced
+              outdoor, labor-intensive tests and overhauls by 80%, automating various test procedures and eliminating the need for
+               several wiring changes. This automation was achieved using an internal STM32F4 microcontroller and supporting electronic
+                circuits. Notable to mention, current transformers (CTs) require periodic testing, which this module streamlined
+                 effectively.
+
+
+            <br><br>
+        </p>
+        <p class="normal-text">
+            <b style="color: red;">Integrating A Current Transformer (CT) Burden Box Module </b>
+            <br><br>
+            This product served as another supplementary module for the tester module and KAVOSH-T22. Since CTs cannot operate
+             in an open-circuit condition, their performance is analyzed and evaluated by connecting various loads to their secondary
+              side, with the results documented in their datasheets. To support manufacturers during initial compliance testing, this
+               device was designed to provide the necessary loads or burdens for the CTs, ensuring accurate performance analysis and
+                validation.
+
+
+            <br><br>
+        </p>
+    </div>
+    <!-- <p><br><br><br><br><br><br><br><br><br><br></p> -->
+
+    <div id="Certifications" class="section">                
+        <h1>Certifications</h1>
+        <p class="normal-text"><b style="color: red;">C (Programming Language) Skill Assessment Badge </b>  (Issued by LinkedIn in 2023) <br>
+            <b style="color: red;">Certificate of C++ Intermediate</b>     (Issued by Sololearn in 2023) <br>
+            <b style="color: red;">Certificate of Introduction to C++</b>     (Issued by Sololearn in 2023) <br>
+            <b style="color: red;">Certificate of Python3 Tutorial Course</b>     (Issued by Sololearn in 2019) <br>
+            <b style="color: red;">Certificate of FPGA tutorial-primary</b>     (Issued by Maktabkhooneh in 2021) <br>
+            <b style="color: red;">Certificate of Basic of Networking</b>     (Issued by Maktabkhooneh in 2021) <br>
+            <b style="color: red;">Certificate of Teacher's Training Course</b>     (Issued by Iranmehr in 2018) <br>
+
+       </p>
+    </div>
+    <!-- <p><br><br></p> -->
+    <div id="Contact" class="section">
+        <h1>Contact</h1>
+        <p class="normal-text"><b style="color: red;">Location:</b>  Tehran, Iran <br>
+            <b style="color: red;">Phone Number:</b>     +989120130363 <br>
+            <b style="color: red;">Website:</b>  amirchavoshi.github.io <br>
+            <b style="color: red;">Email:</b>  amirhochavoshi@gmail.com <br>
+       </p>
+
+    </div>
+    <br><br><br>
+    <!-- <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<!-- <div class="footer">
+  <h2>Footer</h2>
+</div> -->
 
 </body>
 </html>
